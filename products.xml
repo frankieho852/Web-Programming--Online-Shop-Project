@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <totalitem>9</totalitem>
+    <men>
+        <tops>
+            <top pid="1">
+                <name>T-shirt X</name>
+                <color>black</color>
+                <description>T-shirt is the best T-shirt</description>
+                <origin>Hong Kong</origin>
+                <photo>T1.jpg</photo>
+                <price>50</price>
+            </top>
+            <top pid="2">
+                <name>White Horse with Red logo</name>
+                <color>white</color>
+                <description>Simple x Red Logo</description>
+                <origin>Hong Kong</origin>
+                <photo>T3.jpg</photo>
+                <price>55</price>
+            </top>
+            <top pid="3">
+                <name>White Hoodie</name>
+                <color>white</color>
+                <description>Comfortable</description>
+                <origin>Hong Kong</origin>
+                <photo>T4.jpg</photo>
+                <price>50</price>
+            </top>
+            <top pid="4">
+                <name>Dark Grey T-shirt</name>
+                <color>grey</color>
+                <description>Dark feeling</description>
+                <origin>Hong Kong</origin>
+                <photo>T5.jpg</photo>
+                <price>50</price>
+            </top>
+            <top pid="5">
+                <name>T6</name>
+                <color>white</color>
+                <description>This is slim fit T-shirt</description>
+                <origin>Hong Kong</origin>
+                <photo>T6.jpg</photo>
+                <price>90</price>
+            </top>
+        </tops>
+        <pants>
+            <pant pid="6">
+                <name>P1</name>
+                <color>black</color>
+                <description>P1 description is here</description>
+                <origin>Hong Kong</origin>
+                <photo>P1.jpg</photo>
+                <price>150</price>
+            </pant>
+        </pants>
+    </men>
+    <women>
+        <tops>
+            <top pid="7">
+                <name>PINK RUFFLE WRAP TOP</name>
+                <color>pink</color>
+                <description>WRAP TOP description is here</description>
+                <origin>USA</origin>
+                <photo>T2.jpg</photo>
+                <price>80</price>
+            </top>
+            <top pid="8">
+                <name>ICHI</name>
+                <color>white</color>
+                <description>BEST and sharp</description>
+                <origin>USA</origin>
+                <photo>T7.jpg</photo>
+                <price>80</price>
+            </top>
+        </tops>
+        <pants>
+            <pant pid="9">
+                <name>P2</name>
+                <color>white</color>
+                <description>P2 description is here</description>
+                <origin>Hong Kong</origin>
+                <photo>P2.jpg</photo>
+                <price>60</price>
+            </pant>
+        </pants>
+    </women>
+</items>

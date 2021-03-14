@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add item - Online Shop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+      });
+
+      $("#uploadbtn").on("click", function () {
+        var fileName = $(".custom-file-input").val().split("\\").pop();
+        $("#photoAddress").val(fileName);
+      });
+
+    });
+    
+
+  </script>
+
+</head>
+
+<body>
+  <!--navbar here -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <span class="navbar-brand">ABC SHOP - Admin Console</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.php" id="homebtn">Dashboard<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="addbtn">Add Product <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <a class="btn btn-outline-info" href="../index.php" role="button">Logout</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- This is the div for showing the item list -->
+  <div id="addContent" class="container col-md-8">
+    <h2 style="padding-top:4vh">Adding a New Product</h2>
+    <!-- Add the form for a new Pokémon here -->
+    <form id="addForm" enctype="multipart/form-data" method="post" action="additem.php">
+      <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" required name="name" required class="form-control" placeholder="Enter product name">
+      </div>
+
+      <div class="form-group">
+        <label>Color</label>
+        <input type="text" required name="color" class="form-control" placeholder="Enter color">
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" required name="description" class="form-control" placeholder="Enter description">
+      </div>
+      <div class="form-group">
+        <label>Origin</label>
+        <input type="text" required name="origin" class="form-control" placeholder="Enter origin">
+      </div>
+
+      
+      <div class="form-group">
+        <label>Price</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">$HKD</span>
+          </div>
+          <input type="number" required name="price" class="form-control" placeholder="Enter price">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select class="form-control" name="sex" required>
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select class="form-control" name="category" required>
+          <option value="tops">Top</option>
+          <option value="pants">Pants</option>
+        </select>
+      </div>
+      <input type="hidden" name="photoAddress" id="photoAddress">
+
+
+
+      <div class="form-group">
+        <label>Photo</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="photofile" name="photofile" accept="image/*"
+              aria-describedby="inputGroupFileAddon01" required>
+            <label class="custom-file-label">Choose file</label>
+          </div>
+        </div>
+      </div>
+      <button type="sumbit" class="btn btn-secondary" id="uploadbtn">Add the Product</button>
+    </form>
+  </div>
+  <br>
+</body>
+
+</html>
